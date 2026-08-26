@@ -1,33 +1,629 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas Construtivos | Monobuild</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="stylesheet" href="css/sistemaconstrutivo.css" />
+  </head>
 
-    <title>Monobuild</title>
-
-    <link rel="stylesheet" href="css/sistemaconstrutivo.css">
-</head>
-
-<body>
-
+  <body>
     <header class="cabecalho">
+      <div class="logo">
+        <img src="imagens/logotipo.svg" alt="Monobuild" />
+      </div>
 
-        <div class="logo">
-            <img src="imagens/logomonobuild.png" alt="Monobuild">
-        </div>
+      <nav class="menu">
+        <a href="index.html">INÍCIO</a>
+        <a href="empresa.html">EMPRESA</a>
+        <a href="servicos.html">SERVIÇOS</a>
+        <a href="sistemaconstrutivo.html">SISTEMA CONSTRUTIVO</a>
+        <a href="contato.html">CONTATO</a>
+      </nav>
 
-        <nav class="menu">
-            <a href="index.html">INÍCIO</a>
-            <a href="empresa.html">EMPRESA</a>
-            <a href="servicos.html">SERVIÇOS</a>
-            <a href="sistemaconstrutivo.html">SISTEMA CONSTRUTIVO</a>
-            <a href="contato.html">CONTATO</a>
-        </nav>
-
+      <a
+        href="https://wa.me/5511930128341"
+        class="botao-orcamento"
+        target="_blank"
+      >
+        <img src="imagens/logowhats 1.svg" alt="WhatsApp" />
+        SOLICITE UM ORÇAMENTO
+      </a>
     </header>
 
-</body>
+    <!-- HERO / CARROSSEL -->
+    <section class="hero-sistemas">
+        <div class="hero-carrossel-track" id="heroCarrosselTrack">
+            <div class="hero-carrossel-item">
+                <img src="imagens/projeto2.webp" alt="Fachada moderna de casa construída pela Monobuild" />
+            </div>
+            <div class="hero-carrossel-item">
+                <img src="imagens/projeto3.webp" alt="Fachada moderna de casa construída pela Monobuild" />
+            </div>
+            <div class="hero-carrossel-item">
+                <img src="imagens/projeto4.webp" alt="Fachada moderna de casa construída pela Monobuild" />
+            </div>
+        </div>
 
+        <div class="hero-sistemas-texto">
+
+            <h1>
+                SISTEMAS<br />
+                <span>CONSTRUTIVOS</span>
+            </h1>
+
+            <div class="linha-divisoria-clara"></div>
+
+            <p class="hero-sistemas-descricao">
+                Soluções inteligentes<br />para cada tipo de projeto.
+            </p>
+        </div>
+
+        <button class="hero-carrossel-seta hero-seta-esquerda" id="heroSetaEsquerda" aria-label="Foto anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M15 6l-6 6l6 6" />
+            </svg>
+        </button>
+
+        <button class="hero-carrossel-seta hero-seta-direita" id="heroSetaDireita" aria-label="Próxima foto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+            </svg>
+        </button>
+    </section>
+
+    <!-- TIPOS DE SISTEMAS CONSTRUTIVOS -->
+    <section class="tipos-sistemas">
+      <p class="subtitulo">CONHEÇA NOSSOS</p>
+      <h2 class="titulo-secao">Tipos de Sistemas Construtivos</h2>
+
+      <div class="grid-sistemas">
+        <!-- CARD 1 - EPS MONOLÍTICO -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img
+              src="imagens/casaeps.webp"
+              alt="Sistema construtivo EPS Monolítico"
+            />
+            <span class="card-sistema-numero">01</span>
+            <div class="card-sistema-faixa">
+              <h3>EPS MONOLÍTICO</h3>
+              <p>Mais desempenho em uma única etapa.</p>
+            </div>
+          </div>
+
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema que utiliza formas de EPS preenchidas com concreto armado,
+              unindo isolamento térmico e alta resistência estrutural.
+            </p>
+
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 3l8 4v5c0 5 -3.5 7.5 -8 9c-4.5 -1.5 -8 -4 -8 -9v-5l8 -4z"
+                  />
+                </svg>
+                Alta resistência estrutural
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+                </svg>
+                Isolamento térmico e acústico
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+                </svg>
+                Execução rápida e limpa
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 4a2 2 0 0 1 2 2v14l-7 -4l-7 4v-14a2 2 0 0 1 2 -2h10z"
+                  />
+                </svg>
+                Redução de desperdícios
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 3a3 3 0 0 0 -3 3v10a3 3 0 0 0 6 0v-10a3 3 0 0 0 -3 -3"
+                  />
+                  <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-2" />
+                </svg>
+                Sustentabilidade
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 - ALVENARIA ESTRUTURAL -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img
+              src="imagens/casaestrutural.webp"
+              alt="Sistema construtivo Alvenaria Estrutural"
+            />
+            <span class="card-sistema-numero">02</span>
+            <div class="card-sistema-faixa">
+              <h3>ALVENARIA ESTRUTURAL</h3>
+              <p>Robustez e economia para sua obra.</p>
+            </div>
+          </div>
+
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema em que as paredes têm função estrutural, dispensando vigas
+              e pilares convencionais, com mais agilidade e menor custo.
+            </p>
+
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 17l6 -6l4 4l8 -8" />
+                  <path d="M14 7l7 0l0 7" />
+                </svg>
+                Redução no custo da estrutura
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M13.45 11.55l2.05 -2.05" />
+                  <path d="M6.4 20a9 9 0 1 1 11.2 0z" />
+                </svg>
+                Maior rapidez na execução
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l18 0" />
+                  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                  <path d="M9 8l1 0" />
+                  <path d="M9 12l1 0" />
+                  <path d="M9 16l1 0" />
+                  <path d="M14 8l1 0" />
+                  <path d="M14 12l1 0" />
+                  <path d="M14 16l1 0" />
+                </svg>
+                Excelente desempenho estrutural
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+                </svg>
+                Menos etapas construtivas
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+                </svg>
+                Ótimo desempenho térmico e acústico
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 - LIGHT STEEL FRAME -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img
+              src="imagens/casasteel.webp"
+              alt="Sistema construtivo Light Steel Frame"
+            />
+            <span class="card-sistema-numero">03</span>
+            <div class="card-sistema-faixa">
+              <h3>LIGHT STEEL FRAME</h3>
+              <p>Leveza, tecnologia e precisão.</p>
+            </div>
+          </div>
+
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema construtivo industrializado em aço galvanizado, ideal para
+              obras mais rápidas, sustentáveis e com alto padrão de acabamento.
+            </p>
+
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 21c.5 -4.5 2.5 -8 7 -10" />
+                  <path
+                    d="M9 18c6.218 0 10.5 -3.288 11 -12v-2h-4.014c-9 0 -11.986 4 -12 9c0 1 0 3 2 5h3z"
+                  />
+                </svg>
+                Construção a seco
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 3l8 4v5c0 5 -3.5 7.5 -8 9c-4.5 -1.5 -8 -4 -8 -9v-5l8 -4z"
+                  />
+                </svg>
+                Leveza e resistência
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 21v-13l6 -4l6 4v13" />
+                  <path d="M10 21v-6h4v6" />
+                </svg>
+                Precisão e qualidade industrial
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 3a3 3 0 0 0 -3 3v10a3 3 0 0 0 6 0v-10a3 3 0 0 0 -3 -3"
+                  />
+                  <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-2" />
+                </svg>
+                Sustentabilidade
+              </div>
+              <div class="caracteristica">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M6 4v4" />
+                  <path d="M6 12v8" />
+                  <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M12 4v10" />
+                  <path d="M12 18v2" />
+                  <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M18 4v1" />
+                  <path d="M18 9v11" />
+                </svg>
+                Flexibilidade de projetos
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA O SISTEMA CERTO -->
+    <section class="cta-sistema-certo">
+      <img
+        class="cta-sistema-imagem"
+        src="imagens/casavetor.webp"
+        alt="Planta técnica de projeto Monobuild"
+      />
+
+      <div class="cta-sistema-texto">
+        <h3>
+          O SISTEMA CERTO<br />
+          <span>PARA CADA PROJETO.</span>
+        </h3>
+        <p>
+          Analisamos cada necessidade para indicar a melhor solução construtiva
+          para você.
+        </p>
+      </div>
+
+      <a
+        href="https://wa.me/5511930128341"
+        class="botao-falar-especialista"
+        target="_blank"
+      >
+        FALAR COM ESPECIALISTA
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 6l6 6l-6 6" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- RODAPÉ (igual ao index.html) -->
+    <footer class="rodape">
+      <div class="rodape-coluna rodape-logo">
+        <img src="imagens/logotipo.svg" alt="Logotipo Monobuild" />
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>NAVEGAÇÃO</h4>
+        <a href="index.html">Início</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sistemaconstrutivo.html">Sistema Construtivo</a>
+        <a href="contato.html">Contato</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>CONTATO</h4>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+            />
+          </svg>
+          (11) 98549-1206
+        </p>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+            />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+          monobuild@outlook.com.br
+        </p>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path
+              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+            />
+          </svg>
+          Indaiatuba - SP
+        </p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>SIGA-NOS</h4>
+        <div class="rodape-redes">
+          <a
+            href="https://www.instagram.com/monobuildbr/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+              />
+              <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M16.5 7.5l0 .01" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" aria-label="LinkedIn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+              />
+              <path d="M8 11l0 5" />
+              <path d="M8 8l0 .01" />
+              <path d="M12 16l0 -5" />
+              <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="rodape-copyright">
+        © 2026 Monobuild. Todos os direitos reservados.
+      </p>
+    </footer>
+    <script src="js/carrossel.js"></script>
+  </body>
 </html>

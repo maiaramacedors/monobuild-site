@@ -12,8 +12,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* CABEÇALHO
-   Configura a barra preta localizada no topo da página */
+html,
+body {
+  width: 100%;
+}
+
+/* CABEÇALHO */
+
 .cabecalho {
   width: 100%;
   height: 90px;
@@ -24,23 +29,17 @@ body {
   padding: 0 6%;
 }
 
-/* LOGOTIPO
-   Define o tamanho do logo da Monobuild no cabeçalho */
 .logo img {
   width: 130px;
   display: block;
 }
 
-/* MENU
-   Organiza as opções do menu uma ao lado da outra */
 .menu {
   display: flex;
   align-items: center;
   gap: 35px;
 }
 
-/* LINKS DO MENU
-   Define a aparência das opções Início, Empresa, Serviços etc. */
 .menu a {
   color: #ffffff;
   text-decoration: none;
@@ -48,20 +47,16 @@ body {
   font-weight: bold;
 }
 
-/* EFEITO DO MENU
-   Altera a cor do link quando o mouse passa sobre ele */
 .menu a:hover {
-  color: #4fb5ce;
+  color: #24bddb;
 }
 
-/* BOTÃO SOLICITE UM ORÇAMENTO
-   Configura o botão localizado no lado direito do cabeçalho */
 .botao-orcamento {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 12px 18px;
-  border: 2px solid #4fb5ce;
+  border: 2px solid #24bddb;
   border-radius: 9px;
   color: #ffffff;
   background-color: transparent;
@@ -70,30 +65,19 @@ body {
   font-weight: bold;
 }
 
-/* EFEITO DO BOTÃO
-   Altera a aparência quando passar o mouse */
 .botao-orcamento:hover {
   background-color: #3a3a3a;
-  border-color: #4fb5ce;
+  border-color: #24bddb;
   color: #ffffff;
 }
 
-/* ÍCONE DO WHATSAPP
-   Define o tamanho do ícone dentro do botão de orçamento */
 .botao-orcamento img {
   width: 25px;
   height: 25px;
 }
 
-/* CORPO DA PÁGINA
-   Garante que a página ocupe a largura toda e permite rolagem normal */
-html,
-body {
-  width: 100%;
-}
+/* HERO (IMAGEM DA CASA) */
 
-/* ÁREA DA IMAGEM DA CASA
-   Ocupa toda a largura e o restante da tela */
 .casa {
   width: 100%;
   height: calc(100vh - 90px);
@@ -101,17 +85,13 @@ body {
   position: relative;
 }
 
-/* IMAGEM DA CASA
-   Ocupa toda a largura, eliminando os espaços brancos laterais */
 .casa img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   display: block;
 }
 
-/* ESCURECIMENTO DA IMAGEM
-   Mantém o lado esquerdo mais escuro e clareia gradualmente */
 .casa::after {
   content: '';
   position: absolute;
@@ -130,8 +110,6 @@ body {
   pointer-events: none;
 }
 
-/* TEXTO PRINCIPAL
-   Posiciona o texto sobre a imagem da casa */
 .texto-inicio {
   position: absolute;
   top: 50%;
@@ -140,8 +118,6 @@ body {
   z-index: 2;
 }
 
-/* TÍTULO PRINCIPAL
-   Define a aparência do texto sobre a imagem */
 .texto-inicio h1 {
   color: #ffffff;
   font-size: 40px;
@@ -149,14 +125,13 @@ body {
   line-height: 1.05;
 }
 
-/* PALAVRAS EM DESTAQUE
-   Deixa Qualidade e Confiança na cor da Monobuild */
 .texto-inicio h1 span {
-  color: #4fb5ce;
+  color: #24bddb;
 }
 
-/* TEXTO ENGENHARIA • QUALIDADE • PRECISÃO */
-h2 {
+/* SUBTÍTULO DO HERO ("ENGENHARIA • QUALIDADE • PRECISÃO")
+   Renomeado de "h2" genérico para não afetar outros h2 da página */
+.subtitulo-hero {
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;
@@ -164,15 +139,13 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* BOTÃO FALAR NO ZAP
-   Configura o botão localizado na parte inferior da tela */
 .botao-falarzap {
   display: flex;
   align-items: center;
   gap: 10px;
   width: fit-content;
   padding: 12px 10px;
-  border: 2px solid #4fb5ce;
+  border: 2px solid #24bddb;
   border-radius: 9px;
   color: #ffffff;
   background-color: transparent;
@@ -181,30 +154,24 @@ h2 {
   font-weight: bold;
 }
 
-/* ÍCONE DO WHATSAPP
-   Define o tamanho do ícone dentro do botão */
 .botao-falarzap img {
   width: 25px;
   height: 25px;
   object-fit: contain;
 }
 
-/* EFEITO DO BOTÃO
-   Altera a aparência quando passar o mouse */
 .botao-falarzap:hover {
   background-color: #3a3a3a;
-  border-color: #4fb5ce;
+  border-color: #24bddb;
   color: #ffffff;
 }
 
-/* BOTÃO CONHEÇA NOSSOS SERVIÇOS
-   Direciona o usuário para a página de serviços */
 .botao-servicos {
   display: flex;
   align-items: center;
   width: fit-content;
   padding: 12px 18px;
-  background-color: #4fb5ce;
+  background-color: #24bddb;
   color: #000000;
   border-radius: 9px;
   text-decoration: none;
@@ -213,31 +180,434 @@ h2 {
   transition: 0.3s;
 }
 
-/* EFEITO DO BOTÃO SERVIÇOS
-   Altera a aparência ao passar o mouse */
 .botao-servicos:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
-/* ORGANIZA OS BOTÕES DA PÁGINA INICIAL
-   Coloca os dois botões lado a lado */
 .botoes-inicio {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* BOLINHAS ENTRE AS PALAVRAS
-   Utiliza a cor azul da identidade visual da Monobuild */
 .bolinha {
-  color: #4fb5ce;
+  color: #24bddb;
   font-size: 22px;
 }
 
-/* =========================================
-   RESPONSIVIDADE
-   ========================================= */
+/* SEÇÃO NOSSOS SERVIÇOS */
+
+.servicos {
+  width: 100%;
+  padding: 40px 6%;
+  background-color: #000000;
+  text-align: center;
+}
+
+.subtitulo {
+  color: #24bddb;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.titulo-secao {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.grid-servicos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.card-servico-item {
+  background-color: #ffffff;
+  border: 3px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: left;
+  position: relative;
+  transition: 0.3s;
+}
+
+.card-servico-item:hover {
+  border-color: #24bddb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.icone-circulo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #e8f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icone-circulo svg {
+  color: #24bddb;
+  width: 30px;
+  height: 30px;
+}
+
+.card-servico-item h3 {
+  color: #000000;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.card-servico-item p {
+  color: #5f5f5f;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding-right: 40px;
+}
+
+.banner-sistemas {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background-color: #000000;
+  border: 2px solid #24bddb;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-sistemas:hover {
+  background-color: #111111;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 181, 206, 0.25);
+}
+
+/* EFEITO NO CELULAR (tocar na tela) */
+.banner-sistemas:active {
+  background-color: #111111;
+  transform: scale(0.98);
+}
+
+.banner-sistemas-icone {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  background-color: #24bddb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-sistemas-icone svg {
+  color: #000000;
+}
+
+.banner-sistemas-texto {
+  flex: 1;
+}
+
+.banner-sistemas-texto h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.banner-sistemas-texto p {
+  color: #b5b5b5;
+  font-size: 13px;
+  text-align: left;
+}
+
+.banner-sistemas-seta {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border: 2px solid #24bddb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.banner-sistemas-seta svg {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.banner-sistemas:hover .banner-sistemas-seta {
+  background-color: #24bddb;
+  transform: translateX(4px);
+}
+
+/* SEÇÕES DE FUNDO ESCURO (compartilhado)
+   Usado em "Nosso processo" e "Projetos realizados"*/
+
+.subtitulo-claro {
+  color: #24bddb;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.titulo-secao-claro {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* SEÇÃO NOSSO PROCESSO*/
+
+.nosso-processo {
+  width: 100%;
+  padding: 40px 6%;
+  background-color: #000000;
+  text-align: center;
+}
+
+/* Margem específica dessa seção (a base ficou em .titulo-secao-claro) */
+.nosso-processo .titulo-secao-claro {
+  margin-bottom: 12px;
+}
+
+.descricao-secao-clara {
+  color: #b5b5b5;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.linha-processo {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linha-processo::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background-color: #24bddb;
+  z-index: 0;
+}
+
+.etapa-processo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.etapa-icone {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #24bddb;
+  border: 5px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.etapa-icone svg {
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+}
+
+.etapa-numero {
+  color: #24bddb;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.etapa-processo h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.etapa-processo p {
+  color: #b5b5b5;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* FAIXA DE CONTATO (CTA)*/
+
+.secao-cta {
+  width: 100%;
+  background-color: #000000;
+  padding: 40px 6%;
+}
+
+.cta-contato {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border: 1px solid #24bddb;
+  border-radius: 12px;
+}
+
+.cta-icone {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-icone img {
+  width: 28px;
+  height: 28px;
+}
+
+.cta-texto h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.cta-descricao {
+  flex: 1;
+  color: #b5b5b5;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.botao-falar-whatsapp {
+  padding: 14px 24px;
+  background-color: #24bddb;
+  color: #000000;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.botao-falar-whatsapp:hover {
+  background-color: #ffffff;
+}
+
+/* RODAPÉ*/
+
+.rodape {
+  width: 100%;
+  padding: 40px 6% 30px 6%;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.rodape-logo img {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.rodape-slogan {
+  color: #888888;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.rodape-coluna h4 {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.rodape-coluna a,
+.rodape-coluna p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b5b5b5;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.rodape-coluna a:hover {
+  color: #24bddb;
+}
+
+.rodape-coluna svg {
+  min-width: 16px;
+  color: #24bddb;
+}
+
+.rodape-redes {
+  display: flex;
+  gap: 12px;
+}
+
+.rodape-redes a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #24bddb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.rodape-redes a svg {
+  color: #ffffff;
+}
+
+.rodape-redes a:hover {
+  background-color: #24bddb;
+}
+
+.rodape-copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888888;
+  font-size: 12px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* RESPONSIVIDADE*/
 
 /* TABLET E CELULARES GRANDES (até 768px) */
 @media (max-width: 768px) {
@@ -246,14 +616,14 @@ h2 {
   }
 
   .menu {
-    display: none; /* menu completo some — depois criamos um menu */
+    display: none;
   }
 
   .texto-inicio h1 {
     font-size: 34px;
   }
 
-  h2 {
+  .subtitulo-hero {
     font-size: 14px;
   }
 
@@ -261,6 +631,53 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .grid-servicos-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titulo-secao,
+  .titulo-secao-claro {
+    font-size: 24px;
+  }
+
+  .banner-sistemas {
+    flex-wrap: wrap;
+  }
+
+  .linha-processo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .linha-processo::before {
+    display: none;
+  }
+
+  .grid-projetos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cta-contato {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .cta-descricao {
+    flex: none;
+  }
+
+  .botao-falar-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rodape {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
@@ -279,197 +696,30 @@ h2 {
     font-size: 11px;
     padding: 10px 12px;
   }
-}
 
-/* SEÇÃO O QUE FAZEMOS
-   Faixa clara com título e cards de serviços */
-.o-que-fazemos {
-  width: 100%;
-  padding: 80px 6%;
-  background-color: #f5f5f5;
-  text-align: center;
-}
-
-/* SUBTÍTULO PEQUENO
-   Texto azul acima do título principal */
-.o-que-fazemos .subtitulo {
-  color: #4fb5ce;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-/* TÍTULO DA SEÇÃO */
-.titulo-secao {
-  color: #000000;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-/* DESCRIÇÃO DA SEÇÃO
-   Texto explicativo abaixo do título */
-.descricao-secao {
-  color: #5f5f5f;
-  font-size: 15px;
-  max-width: 600px;
-  margin: 0 auto 60px auto;
-  line-height: 1.6;
-}
-
-/* GRID DOS CARDS
-   Organiza os 4 cards em colunas iguais */
-.grid-servicos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* CARD INDIVIDUAL */
-.card-servico {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ÍCONE DENTRO DO CARD */
-.card-servico svg {
-  color: #4fb5ce;
-  width: 48px;
-  height: 48px;
-}
-
-/* NOME DO SERVIÇO */
-.nome-servico {
-  color: #000000;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-/* RESPONSIVIDADE - TABLET */
-@media (max-width: 768px) {
-  .grid-servicos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  .grid-servicos-cards {
+    grid-template-columns: 1fr;
   }
 
-  .titulo-secao {
-    font-size: 24px;
-  }
-}
-
-/* RESPONSIVIDADE - CELULAR */
-@media (max-width: 480px) {
-  .o-que-fazemos {
-    padding: 60px 6%;
+  .card-servico-item p {
+    padding-right: 0;
   }
 
-  .grid-servicos {
+  .banner-sistemas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-sistemas-texto h3,
+  .banner-sistemas-texto p {
+    text-align: center;
+  }
+
+  .linha-processo {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-}
 
-
-/* SEÇÃO PROJETOS REALIZADOS
-   Faixa escura com grid de fotos */
-.projetos {
-  width: 100%;
-  padding: 80px 6%;
-  background-color: #000000;
-  text-align: center;
-}
-
-/* SUBTÍTULO E TÍTULO (fundo escuro)
-   Reutiliza a lógica do subtítulo azul, mas com texto branco no título */
-.subtitulo-claro {
-  color: #4fb5ce;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.titulo-secao-claro {
-  color: #ffffff;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 50px;
-}
-
-/* GRID DE FOTOS
-   4 colunas iguais, mesmo princípio da seção anterior */
-.grid-projetos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
-}
-
-/* CONTAINER DE CADA FOTO
-   Define uma proporção fixa pro quadro, independente do tamanho da imagem original */
-.foto-projeto {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-/* IMAGEM DENTRO DO CONTAINER
-   object-fit recorta mantendo a proporção, sem esticar */
-.foto-projeto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: 0.3s;
-}
-
-/* EFEITO AO PASSAR O MOUSE
-   Leve zoom na foto, comum em sites de portfólio */
-.foto-projeto:hover img {
-  transform: scale(1.05);
-}
-
-/* BOTÃO VER TODOS OS PROJETOS */
-.botao-ver-todos {
-  display: inline-block;
-  padding: 14px 28px;
-  border: 2px solid #4fb5ce;
-  border-radius: 9px;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.botao-ver-todos:hover {
-  background-color: #4fb5ce;
-  color: #000000;
-}
-
-/* RESPONSIVIDADE - TABLET */
-@media (max-width: 768px) {
-  .grid-projetos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .titulo-secao-claro {
-    font-size: 24px;
-  }
-}
-
-/* RESPONSIVIDADE - CELULAR */
-@media (max-width: 480px) {
   .projetos {
     padding: 60px 6%;
   }
@@ -478,203 +728,7 @@ h2 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-}
 
-
-/* SEÇÃO EXTERNA DO CTA
-   Faixa preta que ocupa toda a largura da tela */
-.secao-cta {
-  width: 100%;
-  background-color: #000000;
-  padding: 40px 6%;
-}
-
-/* SEÇÃO CTA DE CONTATO
-   Caixa com borda, agora só cuida do conteúdo interno */
-.cta-contato {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 40px;
-  border: 1px solid #4fb5ce;
-  border-radius: 12px;
-}
-
-/* ÍCONE DO WHATSAPP
-   Círculo azul com o ícone dentro */
-.cta-icone {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cta-icone img {
-  width: 28px;
-  height: 28px;
-}
-
-/* TÍTULO DO CTA */
-.cta-texto h3 {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.3;
-}
-
-/* DESCRIÇÃO DO CTA
-   Empurra pro meio do espaço disponível */
-.cta-descricao {
-  flex: 1;
-  color: #b5b5b5;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* BOTÃO FALAR NO WHATSAPP */
-.botao-falar-whatsapp {
-  padding: 14px 24px;
-  background-color: #4fb5ce;
-  color: #000000;
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.botao-falar-whatsapp:hover {
-  background-color: #ffffff;
-}
-
-/* RESPONSIVIDADE - TABLET E CELULAR
-   Empilha tudo verticalmente quando não cabe na horizontal */
-@media (max-width: 768px) {
-  .cta-contato {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .cta-descricao {
-    flex: none;
-  }
-
-  .botao-falar-whatsapp {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-
-/* RODAPÉ
-   Faixa preta final, organizada em colunas */
-.rodape {
-  width: 100%;
-  padding: 60px 6% 30px 6%;
-  background-color: #000000;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-/* COLUNA DA LOGO */
-.rodape-logo img {
-  width: 140px;
-  margin-bottom: 10px;
-}
-
-.rodape-slogan {
-  color: #888888;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-}
-
-/* TÍTULO DE CADA COLUNA */
-.rodape-coluna h4 {
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-/* LINKS DE NAVEGAÇÃO E CONTATO
-   Empilhados verticalmente dentro da coluna */
-.rodape-coluna a,
-.rodape-coluna p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #b5b5b5;
-  text-decoration: none;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.rodape-coluna a:hover {
-  color: #4fb5ce;
-}
-
-/* ÍCONES DENTRO DOS TEXTOS DE CONTATO */
-.rodape-coluna svg {
-  min-width: 16px;
-  color: #4fb5ce;
-}
-
-/* REDES SOCIAIS
-   Ícones lado a lado, dentro de círculos */
-.rodape-redes {
-  display: flex;
-  gap: 12px;
-}
-
-.rodape-redes a {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #4fb5ce;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-}
-
-.rodape-redes a svg {
-  color: #ffffff;
-}
-
-.rodape-redes a:hover {
-  background-color: #4fb5ce;
-}
-
-/* COPYRIGHT
-   Ocupa a largura toda embaixo, separado por uma linha */
-.rodape-copyright {
-  grid-column: 1 / -1;
-  text-align: center;
-  color: #888888;
-  font-size: 12px;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #2a2a2a;
-}
-
-/* RESPONSIVIDADE - TABLET */
-@media (max-width: 768px) {
-  .rodape {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-/* RESPONSIVIDADE - CELULAR */
-@media (max-width: 480px) {
   .rodape {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -689,4 +743,173 @@ h2 {
   .rodape-redes {
     justify-content: center;
   }
+}
+
+/* SEÇÃO SOBRE NÓS*/
+
+.sobre-nos {
+  width: 100%;
+  padding: 50px 6%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.subtitulo-sobre {
+  color: #24bddb;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.titulo-sobre {
+  color: #000000;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.titulo-sobre span {
+  color: #24bddb;
+}
+
+.linha-divisoria {
+  width: 50px;
+  height: 3px;
+  background-color: #24bddb;
+  margin-bottom: 24px;
+}
+
+.texto-sobre {
+  color: #5f5f5f;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+.texto-sobre span {
+  color: #24bddb;
+  font-weight: bold;
+}
+
+.sobre-imagem {
+  flex: 1;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  /* Recorte diagonal simples nos dois cantos opostos */
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+/* SEÇÃO MISSÃO / VISÃO / VALORES */
+
+.valores-empresa {
+  width: 100%;
+  padding: 40px 6%;
+  background-color: #f5f7f8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.valor-item {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* LINHA VERTICAL ENTRE OS ITENS
+   Não aparece no primeiro item */
+.valor-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background-color: #d5d5d5;
+}
+
+.valor-item:first-child::before {
+  display: none;
+}
+
+.valor-icone {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valor-icone svg {
+  color: #24bddb;
+  width: 36px;
+  height: 36px;
+}
+
+.valor-item h3 {
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-align: 60px;
+}
+
+.valor-item p {
+  color: #5f5f5f;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVIDADE*/
+
+@media (max-width: 768px) {
+  .sobre-nos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .titulo-sobre {
+    font-size: 24px;
+  }
+
+  .sobre-imagem img {
+    height: 280px;
+    clip-path: none; /* recorte diagonal não fica bom empilhado, melhor remover */
+    border-radius: 12px;
+  }
+
+  .valores-empresa {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 20px;
+  }
+
+  .valor-item:nth-child(2)::before {
+    display: none; /* segundo item de cada linha também não precisa de linha à esquerda */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.secao-sistema-construtivo {
+  width: 100%;
+  padding: 40px 6% 40px 6%;
+  background-color: #ffffff;
 }

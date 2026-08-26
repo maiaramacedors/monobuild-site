@@ -1,64 +1,374 @@
-/* CONFIGURAÇÃO GERAL
-   Remove as margens e espaçamentos automáticos do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* HERO / CARROSSEL*/
+
+.hero-sistemas {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
 }
 
-
-/* CORPO DA PÁGINA
-   Define a fonte utilizada na página inicial */
-body {
-    font-family: Arial, sans-serif;
+/* FAIXA DAS IMAGENS
+   Desliza horizontalmente, uma foto por "página" */
+.hero-carrossel-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
+.hero-carrossel-track::-webkit-scrollbar {
+  display: none;
+}
 
-/* CABEÇALHO
-   Configura a barra preta localizada no topo da página */
-.cabecalho {
-    width: 100%;
-    height: 90px;
+.hero-carrossel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  height: 100%;
+}
 
-    background-color: #000000;
+.hero-carrossel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* ESCURECIMENTO
+   Fica por cima de TODAS as fotos, sempre visível, não faz parte do carrossel */
+.hero-sistemas::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.85) 35%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0) 85%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
 
+/* TEXTO FIXO POR CIMA
+   z-index maior que o gradiente, sempre visível independente da foto */
+.hero-sistemas-texto {
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 480px;
+}
+
+.hero-sistemas-logo {
+  width: 90px;
+  margin-bottom: 16px;
+}
+
+.hero-sistemas-tagline {
+  color: #b5b5b5;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-sistemas-texto h1 {
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.hero-sistemas-texto h1 span {
+  color: #4fb5ce;
+}
+
+.linha-divisoria-clara {
+  width: 50px;
+  height: 3px;
+  background-color: #4fb5ce;
+  margin: 20px 0;
+}
+
+.hero-sistemas-descricao {
+  color: #d5d5d5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* SETAS
+   Posicionadas nas laterais, por cima de tudo (z-index maior ainda) */
+.hero-carrossel-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #4fb5ce;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-carrossel-seta:hover {
+  background-color: #4fb5ce;
+}
+
+.hero-seta-esquerda {
+  left: 24px;
+}
+
+.hero-seta-direita {
+  right: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-sistemas {
+    height: 420px;
+  }
+
+  .hero-sistemas-texto h1 {
+    font-size: 32px;
+  }
+
+  .hero-carrossel-seta {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* TIPOS DE SISTEMAS CONSTRUTIVOS*/
+
+.tipos-sistemas {
+  width: 100%;
+  padding: 80px 6%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.grid-sistemas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+.card-sistema {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card-sistema:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* IMAGEM DO CARD COM NÚMERO E FAIXA DE TÍTULO */
+.card-sistema-imagem {
+  position: relative;
+  height: 220px;
+}
+
+.card-sistema-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-sistema-numero {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #4fb5ce;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* Faixa escura sobre a base da foto, com o título */
+.card-sistema-faixa {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+}
+
+.card-sistema-faixa h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-sistema-faixa p {
+  color: #d5d5d5;
+  font-size: 12px;
+}
+
+/* CORPO DO CARD (descrição + lista) */
+.card-sistema-corpo {
+  padding: 24px;
+}
+
+.card-sistema-descricao {
+  color: #5f5f5f;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lista-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.caracteristica {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.caracteristica svg {
+  color: #4fb5ce;
+  min-width: 18px;
+}
+
+/* CTA O SISTEMA CERTO*/
+
+.cta-sistema-certo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 30px 40px;
+  background-color: #000000;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-sistema-imagem {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cta-sistema-texto {
+  flex: 1;
+}
+
+.cta-sistema-texto h3 {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.cta-sistema-texto h3 span {
+  color: #4fb5ce;
+}
+
+.cta-sistema-texto p {
+  color: #b5b5b5;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.botao-falar-especialista {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.botao-falar-especialista:hover {
+  background-color: #4fb5ce;
+}
+
+/* RESPONSIVIDADE*/
+
+@media (max-width: 768px) {
+  .hero-sistemas {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-sistemas img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .hero-sistemas-texto {
+    position: relative;
+    top: auto;
+    left: 0;
+    transform: none;
     padding: 0 6%;
+  }
+
+  .hero-sistemas-texto h1 {
+    font-size: 32px;
+  }
+
+  .grid-sistemas {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-sistema-certo {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .botao-falar-especialista {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-
-/* LOGOTIPO
-   Define o tamanho do logo da Monobuild no cabeçalho */
-.logo img {
-    width: 130px;
-    display: block;
-}
-
-
-/* MENU
-   Organiza as opções do menu uma ao lado da outra */
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-
-/* LINKS DO MENU
-   Define a aparência das opções Início, Empresa, Serviços etc. */
-.menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-/* EFEITO DO MENU
-   Altera a cor do link quando o mouse passa sobre ele */
-.menu a:hover {
-    color: #4FB5CE;
+.titulo-secao {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
