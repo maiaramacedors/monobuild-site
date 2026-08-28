@@ -1,13 +1,10 @@
-/* CONFIGURAÇÃO GERAL
-   Remove as margens e espaçamentos automáticos do navegador */
+/* CONFIGURAÇÃO GERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CORPO DA PÁGINA
-   Define a fonte utilizada na página inicial */
 body {
   font-family: Arial, sans-serif;
 }
@@ -15,10 +12,10 @@ body {
 html,
 body {
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 /* CABEÇALHO */
-
 .cabecalho {
   width: 100%;
   height: 90px;
@@ -27,6 +24,19 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 6%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+body {
+  padding-top: 90px;
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: 90px;
 }
 
 .logo img {
@@ -38,6 +48,8 @@ body {
   display: flex;
   align-items: center;
   gap: 35px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .menu a {
@@ -48,7 +60,7 @@ body {
 }
 
 .menu a:hover {
-  color: #24bddb;
+  color: #4fb5ce;
 }
 
 .botao-orcamento {
@@ -56,7 +68,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 12px 18px;
-  border: 2px solid #24bddb;
+  border: 2px solid #4fb5ce;
   border-radius: 9px;
   color: #ffffff;
   background-color: transparent;
@@ -67,7 +79,7 @@ body {
 
 .botao-orcamento:hover {
   background-color: #3a3a3a;
-  border-color: #24bddb;
+  border-color: #4fb5ce;
   color: #ffffff;
 }
 
@@ -76,8 +88,7 @@ body {
   height: 25px;
 }
 
-/* HERO (IMAGEM DA CASA) */
-
+/* HERO */
 .casa {
   width: 100%;
   height: calc(100vh - 90px);
@@ -126,11 +137,9 @@ body {
 }
 
 .texto-inicio h1 span {
-  color: #24bddb;
+  color: #4fb5ce;
 }
 
-/* SUBTÍTULO DO HERO ("ENGENHARIA • QUALIDADE • PRECISÃO")
-   Renomeado de "h2" genérico para não afetar outros h2 da página */
 .subtitulo-hero {
   color: #ffffff;
   font-size: 18px;
@@ -139,13 +148,38 @@ body {
   margin-bottom: 30px;
 }
 
+.botoes-inicio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.botao-servicos {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 18px;
+  background-color: #4fb5ce;
+  color: #000000;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-servicos:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .botao-falarzap {
   display: flex;
   align-items: center;
   gap: 10px;
   width: fit-content;
   padding: 12px 10px;
-  border: 2px solid #24bddb;
+  border: 2px solid #4fb5ce;
   border-radius: 9px;
   color: #ffffff;
   background-color: transparent;
@@ -162,60 +196,107 @@ body {
 
 .botao-falarzap:hover {
   background-color: #3a3a3a;
-  border-color: #24bddb;
+  border-color: #4fb5ce;
   color: #ffffff;
 }
 
-.botao-servicos {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  padding: 12px 18px;
-  background-color: #24bddb;
-  color: #000000;
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.botao-servicos:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.botoes-inicio {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .bolinha {
-  color: #24bddb;
+  color: #4fb5ce;
   font-size: 22px;
 }
 
-/* SEÇÃO NOSSOS SERVIÇOS */
+/* SOBRE NÓS / EMPRESA */
+.sobre-nos {
+  width: 100%;
+  padding: 80px 6%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
 
+.sobre-texto {
+  flex: 1;
+}
+
+.subtitulo-sobre {
+  color: #4fb5ce;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.titulo-sobre {
+  color: #000000;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.titulo-sobre span {
+  color: #4fb5ce;
+}
+
+.linha-divisoria {
+  width: 50px;
+  height: 3px;
+  background-color: #4fb5ce;
+  margin-bottom: 24px;
+}
+
+.texto-sobre {
+  color: #5f5f5f;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+.texto-sobre span {
+  color: #4fb5ce;
+  font-weight: bold;
+}
+
+.sobre-imagem {
+  flex: 1;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* NOSSOS SERVIÇOS */
 .servicos {
   width: 100%;
   padding: 40px 6%;
-  background-color: #000000;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .subtitulo {
-  color: #24bddb;
-  font-size: 18px;
+  color: #4fb5ce;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
-.titulo-secao {
+.titulo-secao2 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.h2 titulo-secao {
+  color: #000000;
+  font-size: 28px;
   font-weight: bold;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -226,21 +307,20 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 1200px;
-  margin: 0 auto 40px auto;
+  margin: 40px auto 0 auto;
+  text-align: left;
 }
 
 .card-servico-item {
   background-color: #ffffff;
-  border: 3px solid #e5e5e5;
-  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
   padding: 32px;
-  text-align: left;
-  position: relative;
   transition: 0.3s;
 }
 
 .card-servico-item:hover {
-  border-color: #24bddb;
+  border-color: #4fb5ce;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
@@ -256,7 +336,7 @@ body {
 }
 
 .icone-circulo svg {
-  color: #24bddb;
+  color: #4fb5ce;
   width: 30px;
   height: 30px;
 }
@@ -271,98 +351,169 @@ body {
   color: #5f5f5f;
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 24px;
-  padding-right: 40px;
 }
 
-.banner-sistemas {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 40px;
+/* TIPOS DE SISTEMAS CONSTRUTIVOS */
+.tipos-sistemas {
+  width: 100%;
+  padding: 40px 6%;
   background-color: #000000;
-  border: 2px solid #24bddb;
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
+  text-align: center;
+}
+
+.grid-sistemas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 40px auto;
+}
+
+.card-sistema {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: left;
   transition: 0.3s;
 }
 
-.banner-sistemas:hover {
-  background-color: #111111;
-  border-color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(79, 181, 206, 0.25);
+.card-sistema:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
 
-/* EFEITO NO CELULAR (tocar na tela) */
-.banner-sistemas:active {
-  background-color: #111111;
-  transform: scale(0.98);
+.card-sistema-imagem {
+  position: relative;
+  height: 220px;
 }
 
-.banner-sistemas-icone {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  border-radius: 50%;
-  background-color: #24bddb;
+.card-sistema-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-sistema-numero {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #4fb5ce;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.card-sistema-faixa {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+}
+
+.card-sistema-faixa h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-sistema-faixa p {
+  color: #d5d5d5;
+  font-size: 12px;
+}
+
+.card-sistema-corpo {
+  padding: 24px;
+}
+
+.card-sistema-descricao {
+  color: #5f5f5f;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lista-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.caracteristica {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.banner-sistemas-icone svg {
-  color: #000000;
+.caracteristica svg {
+  color: #4fb5ce;
+  min-width: 18px;
 }
 
-.banner-sistemas-texto {
+.cta-sistema-imagem {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cta-sistema-texto {
   flex: 1;
 }
 
-.banner-sistemas-texto h3 {
+.cta-sistema-texto h3 {
   color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 6px;
-  text-align: left;
+  font-size: 20px;
+  line-height: 1.3;
 }
 
-.banner-sistemas-texto p {
+.cta-sistema-texto h3 span {
+  color: #4fb5ce;
+}
+
+.cta-sistema-texto p {
   color: #b5b5b5;
   font-size: 13px;
-  text-align: left;
+  margin-top: 8px;
 }
 
-.banner-sistemas-seta {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border: 2px solid #24bddb;
-  border-radius: 50%;
+.botao-falar-especialista {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.banner-sistemas-seta svg {
+  gap: 8px;
+  padding: 14px 24px;
+  background-color: #000000;
   color: #ffffff;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
-.banner-sistemas:hover .banner-sistemas-seta {
-  background-color: #24bddb;
-  transform: translateX(4px);
+/* NOSSO PROCESSO */
+.nosso-processo {
+  width: 100%;
+  padding: 50px 6%;
+  background-color: #000000;
+  text-align: center;
+  margin-top: -3%;
 }
-
-/* SEÇÕES DE FUNDO ESCURO (compartilhado)
-   Usado em "Nosso processo" e "Projetos realizados"*/
 
 .subtitulo-claro {
-  color: #24bddb;
-  font-size: 18px;
+  color: #4fb5ce;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -370,22 +521,9 @@ body {
 
 .titulo-secao-claro {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 1.3;
-}
-
-/* SEÇÃO NOSSO PROCESSO*/
-
-.nosso-processo {
-  width: 100%;
-  padding: 40px 6%;
-  background-color: #000000;
-  text-align: center;
-}
-
-/* Margem específica dessa seção (a base ficou em .titulo-secao-claro) */
-.nosso-processo .titulo-secao-claro {
   margin-bottom: 12px;
 }
 
@@ -396,7 +534,6 @@ body {
 }
 
 .linha-processo {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -404,20 +541,7 @@ body {
   margin: 0 auto;
 }
 
-.linha-processo::before {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 60px;
-  right: 60px;
-  height: 2px;
-  background-color: #24bddb;
-  z-index: 0;
-}
-
 .etapa-processo {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -427,8 +551,7 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #24bddb;
-  border: 5px solid #000000;
+  background-color: #4fb5ce;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +565,7 @@ body {
 }
 
 .etapa-numero {
-  color: #24bddb;
+  color: #4fb5ce;
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 6px;
@@ -460,8 +583,7 @@ body {
   line-height: 1.5;
 }
 
-/* FAIXA DE CONTATO (CTA)*/
-
+/* FAIXA DE CONTATO (CTA) */
 .secao-cta {
   width: 100%;
   background-color: #000000;
@@ -475,7 +597,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 40px;
-  border: 1px solid #24bddb;
+  border: 1px solid #4fb5ce;
   border-radius: 12px;
 }
 
@@ -511,7 +633,7 @@ body {
 
 .botao-falar-whatsapp {
   padding: 14px 24px;
-  background-color: #24bddb;
+  background-color: #4fb5ce;
   color: #000000;
   border-radius: 9px;
   text-decoration: none;
@@ -524,11 +646,10 @@ body {
   background-color: #ffffff;
 }
 
-/* RODAPÉ*/
-
+/* RODAPÉ */
 .rodape {
   width: 100%;
-  padding: 40px 6% 30px 6%;
+  padding: 60px 6% 30px 6%;
   background-color: #000000;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -536,7 +657,7 @@ body {
 }
 
 .rodape-logo img {
-  width: 300px;
+  width: 250px;
   margin-bottom: 10px;
 }
 
@@ -565,12 +686,12 @@ body {
 }
 
 .rodape-coluna a:hover {
-  color: #24bddb;
+  color: #4fb5ce;
 }
 
 .rodape-coluna svg {
   min-width: 16px;
-  color: #24bddb;
+  color: #4fb5ce;
 }
 
 .rodape-redes {
@@ -581,7 +702,7 @@ body {
 .rodape-redes a {
   width: 36px;
   height: 36px;
-  border: 1px solid #24bddb;
+  border: 1px solid #4fb5ce;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -594,7 +715,7 @@ body {
 }
 
 .rodape-redes a:hover {
-  background-color: #24bddb;
+  background-color: #4fb5ce;
 }
 
 .rodape-copyright {
@@ -607,9 +728,67 @@ body {
   border-top: 1px solid #2a2a2a;
 }
 
-/* RESPONSIVIDADE*/
+/* RESPONSIVIDADE - TABLET (até 1024px): Serviços, Sistema Construtivo e Processo viram carrossel */
+@media (max-width: 1024px) {
+  .grid-servicos-cards {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
 
-/* TABLET E CELULARES GRANDES (até 768px) */
+  .grid-servicos-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-servico-item {
+    flex: 0 0 calc(50% - 12px);
+    scroll-snap-align: start;
+  }
+
+  .grid-sistemas {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+
+  .grid-sistemas::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-sistema {
+    flex: 0 0 calc(70% - 12px);
+    scroll-snap-align: start;
+  }
+
+  .linha-processo {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+
+  .linha-processo::-webkit-scrollbar {
+    display: none;
+  }
+
+  .etapa-processo {
+    flex: 0 0 calc(40% - 12px);
+    scroll-snap-align: start;
+  }
+}
+
+/* RESPONSIVIDADE - TABLET/CELULAR (até 768px) */
 @media (max-width: 768px) {
   .cabecalho {
     padding: 0 4%;
@@ -633,8 +812,21 @@ body {
     gap: 12px;
   }
 
-  .grid-servicos-cards {
-    grid-template-columns: repeat(2, 1fr);
+  .sobre-nos {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .titulo-sobre {
+    font-size: 24px;
+  }
+
+  .sobre-imagem img {
+    height: 280px;
+  }
+
+  .card-servico-item {
+    flex: 0 0 85%;
   }
 
   .titulo-secao,
@@ -642,22 +834,16 @@ body {
     font-size: 24px;
   }
 
-  .banner-sistemas {
-    flex-wrap: wrap;
+  .card-sistema {
+    flex: 0 0 88%;
+  }
+  .cta-sistema-texto h3,
+  .cta-sistema-texto p {
+    text-align: center;
   }
 
-  .linha-processo {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  .linha-processo::before {
-    display: none;
-  }
-
-  .grid-projetos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .etapa-processo {
+    flex: 0 0 60%;
   }
 
   .cta-contato {
@@ -681,7 +867,7 @@ body {
   }
 }
 
-/* CELULARES PEQUENOS (até 480px) */
+/* RESPONSIVIDADE - CELULAR (até 480px) */
 @media (max-width: 480px) {
   .texto-inicio h1 {
     font-size: 26px;
@@ -697,36 +883,16 @@ body {
     padding: 10px 12px;
   }
 
-  .grid-servicos-cards {
-    grid-template-columns: 1fr;
+  .card-servico-item {
+    flex: 0 0 90%;
   }
 
-  .card-servico-item p {
-    padding-right: 0;
+  .card-sistema {
+    flex: 0 0 92%;
   }
 
-  .banner-sistemas {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .banner-sistemas-texto h3,
-  .banner-sistemas-texto p {
-    text-align: center;
-  }
-
-  .linha-processo {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .projetos {
-    padding: 60px 6%;
-  }
-
-  .grid-projetos {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .etapa-processo {
+    flex: 0 0 75%;
   }
 
   .rodape {
@@ -745,171 +911,290 @@ body {
   }
 }
 
-/* SEÇÃO SOBRE NÓS*/
-
-.sobre-nos {
-  width: 100%;
-  padding: 50px 6%;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-
-.sobre-texto {
-  flex: 1;
-}
-
-.subtitulo-sobre {
-  color: #24bddb;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-
-.titulo-sobre {
-  color: #000000;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.titulo-sobre span {
-  color: #24bddb;
-}
-
-.linha-divisoria {
-  width: 50px;
-  height: 3px;
-  background-color: #24bddb;
-  margin-bottom: 24px;
-}
-
-.texto-sobre {
-  color: #5f5f5f;
-  font-size: 15px;
-  line-height: 1.8;
-  max-width: 480px;
-}
-
-.texto-sobre span {
-  color: #24bddb;
-  font-weight: bold;
-}
-
-.sobre-imagem {
-  flex: 1;
-}
-
-.sobre-imagem img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-  /* Recorte diagonal simples nos dois cantos opostos */
-  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-}
-
-/* SEÇÃO MISSÃO / VISÃO / VALORES */
-
-.valores-empresa {
-  width: 100%;
-  padding: 40px 6%;
-  background-color: #f5f7f8;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.valor-item {
-  text-align: center;
-  padding: 0 20px;
-  position: relative;
-}
-
-/* LINHA VERTICAL ENTRE OS ITENS
-   Não aparece no primeiro item */
-.valor-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  bottom: 10px;
-  width: 1px;
-  background-color: #d5d5d5;
-}
-
-.valor-item:first-child::before {
+/* BOTÃO HAMBÚRGUER
+   Escondido no desktop por padrão */
+.botao-hamburguer {
   display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 101;
 }
 
-.valor-icone {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 16px auto;
+/* MENU MOBILE
+   Dropdown que ocupa a tela abaixo do cabeçalho, escondido por padrão */
+.menu-mobile {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  padding: 0 6%;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+/* Quando tiver a classe "aberto", expande o dropdown */
+.menu-mobile.aberto {
+  max-height: 500px;
+  padding: 20px 6%;
+}
+
+.menu-mobile-link {
+  color: #b5b5b5;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.menu-mobile-link:hover {
+  color: #4fb5ce;
+}
+
+.menu-mobile-whatsapp {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.valor-icone svg {
-  color: #24bddb;
-  width: 36px;
-  height: 36px;
-}
-
-.valor-item h3 {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #4fb5ce;
   color: #000000;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-  text-align: 60px;
-}
-
-.valor-item p {
-  color: #5f5f5f;
+  border-radius: 9px;
+  text-decoration: none;
   font-size: 13px;
-  line-height: 1.6;
+  font-weight: bold;
 }
 
-/* RESPONSIVIDADE*/
-
+/* RESPONSIVIDADE
+   Esconde o menu normal e o botão de orçamento, mostra o hambúrguer */
 @media (max-width: 768px) {
-  .sobre-nos {
-    flex-direction: column;
-    gap: 30px;
+  .menu {
+    display: none;
   }
 
-  .titulo-sobre {
-    font-size: 24px;
+  .botao-orcamento {
+    display: none;
   }
 
-  .sobre-imagem img {
-    height: 280px;
-    clip-path: none; /* recorte diagonal não fica bom empilhado, melhor remover */
-    border-radius: 12px;
-  }
-
-  .valores-empresa {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 20px;
-  }
-
-  .valor-item:nth-child(2)::before {
-    display: none; /* segundo item de cada linha também não precisa de linha à esquerda */
+  .botao-hamburguer {
+    display: block;
   }
 }
-
-html {
-  scroll-behavior: smooth;
+.carrossel-servicos-container {
+  position: relative;
 }
 
-.secao-sistema-construtivo {
-  width: 100%;
-  padding: 40px 6% 40px 6%;
+.carrossel-seta {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #4fb5ce;
   background-color: #ffffff;
+  color: #4fb5ce;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.carrossel-seta:hover {
+  background-color: #4fb5ce;
+  color: #ffffff;
+}
+
+.carrossel-seta-esquerda {
+  left: -10px;
+}
+
+.carrossel-seta-direita {
+  right: -10px;
+}
+
+@media (max-width: 1024px) {
+  .carrossel-seta {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrossel-seta-esquerda {
+    left: 4px;
+  }
+
+  .carrossel-seta-direita {
+    right: 4px;
+  }
+}
+
+/* CARROSSEL DO HERO */
+.hero-carrossel-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.hero-carrossel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-carrossel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  height: 100%;
+}
+
+.hero-carrossel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BOLINHAS (DOTS)
+   Centralizadas na parte de baixo do hero */
+.hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.hero-dot.ativo {
+  background-color: #4fb5ce;
+  width: 28px;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  .hero-dots {
+    bottom: 16px;
+  }
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 150;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ANEL DE PULSO (efeito "respirando")
+   Um círculo que expande e desaparece atrás do botão, em loop */
+.whatsapp-pulso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #25d366;
+  animation: pulsar 2.2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* TOOLTIP (balão de texto)
+   Escondido por padrão, aparece só no hover (desktop) */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 72px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000000;
+}
+
+.whatsapp-flutuante:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* No celular, sem espaço pra tooltip lateral — some o texto, mantém só o ícone */
+@media (max-width: 768px) {
+  .whatsapp-flutuante {
+    width: 54px;
+    height: 54px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-tooltip {
+    display: none;
+  }
+}
+

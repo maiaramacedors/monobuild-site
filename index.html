@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monobuild</title>
-    <link rel="icon" type="image/webp" href="imagens/logoicone.webp">
+    <link rel="icon" type="image/svg+xml" href="imagens/logoicone.webp" />
 
     <link rel="stylesheet" href="css/inicio.css" />
-
   </head>
 
   <body>
@@ -18,384 +17,357 @@
 
       <nav class="menu">
         <a href="#inicio">INÍCIO</a>
-        <a href="#empresa">EMPRESA</a>
         <a href="#servicos">SERVIÇOS</a>
         <a href="#sistema-construtivo">SISTEMA CONSTRUTIVO</a>
+        <a href="#empresa">EMPRESA</a>
         <a href="#contato">CONTATO</a>
       </nav>
-      <a
-        href="https://wa.me/5511930128341"
-        class="botao-orcamento"
-        target="_blank"
-      >
-        <img src="imagens/logowhats 1.svg" alt="WhatsApp" />
-        SOLICITE UM ORÇAMENTO
-      </a>
+
+      <!-- BOTÃO HAMBÚRGUER (mobile/tablet) -->
+      <button class="botao-hamburguer" id="botaoHamburguer" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="iconeHamburguer">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 6l16 0" />
+          <path d="M4 12l16 0" />
+          <path d="M4 18l16 0" />
+        </svg>
+      </button>
     </header>
 
-    <!-- HERO / INÍCIO -->
-    <div class="casa" id="inicio">
-      <img
-        src="imagens/casainicio.webp"
-        alt="Fachada iluminada de casa moderna à noite, projeto residencial Monobuild"
-      />
-
-      <div class="texto-inicio">
-        <h1>
-          CONSTRUÍMOS<br />
-          COM <span>QUALIDADE.</span><br />
-          ENTREGAMOS<br />
-          <span>CONFIANÇA.</span>
-        </h1>
-        <h2 class="subtitulo-hero">
-          COMPROMETIMENTO <span class="bolinha">•</span> QUALIDADE
-          <span class="bolinha">•</span>
-          EFICIÊNCIA
-        </h2>
-        <div class="botoes-inicio">
-          <a href="#servicos" class="botao-servicos">
-            CONHEÇA NOSSOS SERVIÇOS →
-          </a>
-          <a
-            href="https://wa.me/5511930128341"
-            class="botao-falarzap"
-            target="_blank"
-          >
-            <img src="imagens/logowhats 1.svg" alt="WhatsApp" />
-            CHAMAR NO WHATSAPP
-          </a>
-        </div>
-      </div>
+    <!-- MENU MOBILE (dropdown em tela cheia) -->
+    <div class="menu-mobile" id="menuMobile">
+      <a href="#servicos" class="menu-mobile-link">Sistemas</a>
+      <a href="#sistema-construtivo" class="menu-mobile-link">Processo</a>
+      <a href="#empresa" class="menu-mobile-link">A empresa</a>
+      <a href="#contato" class="menu-mobile-link">Contato</a>
+      <a href="https://wa.me/5519996364658" class="menu-mobile-whatsapp" target="_blank">
+        SOLICITAR ORÇAMENTO
+      </a>
     </div>
 
-    <!-- SOBRE NÓS / EMPRESA -->
-    <section class="sobre-nos" id="empresa">
-      <div class="sobre-texto">
-        <p class="subtitulo-sobre">SOBRE NÓS —</p>
-        <h2 class="titulo-sobre">
-          CONSTRUÍMOS <br />
-          MAIS QUE OBRAS,<br />
-          <span
-            >CONSTRUÍMOS <br />
-            RELAÇÕES.</span
-          >
-        </h2>
-        <div class="linha-divisoria"></div>
-        <p class="texto-sobre">
-          A <span>Monobuild</span> nasceu com o propósito de entregar soluções
-          construtivas inteligentes, seguras e sustentáveis. Unimos engenharia,
-          tecnologia e compromisso para transformar projetos em obras de alta
-          qualidade.
-        </p>
-      </div>
-      <div class="sobre-imagem">
-        <img
-          src="imagens/projeto1.webp"
-          alt="Fachada moderna de projeto Monobuild"
-        />
-      </div>
-    </section>
-    <section class="valores-empresa">
-      <div class="valor-item">
-        <div class="valor-icone">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-            <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
-            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-          </svg>
+    <!-- HERO / INÍCIO (CARROSSEL) -->
+    <div class="casa" id="inicio">
+    <div class="hero-carrossel-track" id="heroCarrosselTrack">
+        <div class="hero-carrossel-item">
+            <img src="imagens/casainicio.webp" alt="Fachada iluminada de casa moderna à noite, projeto residencial Monobuild" />
         </div>
-        <h3>MISSÃO</h3>
-        <p>
-          Entregar soluções construtivas de qualidade, com foco em inovação,
-          eficiência e satisfação dos clientes.
-        </p>
-      </div>
-      <div class="valor-item">
-        <div class="valor-icone">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-            <path
-              d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
-            />
-          </svg>
+        <div class="hero-carrossel-item">
+            <img src="imagens/projeto2.webp" alt="Fachada de casa moderna, projeto residencial Monobuild" />
         </div>
-        <h3>VISÃO</h3>
-        <p>
-          Ser referência em construção sustentável e inovadora, transformando o
-          futuro da construção civil no Brasil.
-        </p>
-      </div>
-      <div class="valor-item">
-        <div class="valor-icone">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M6 3h12l4 6l-10 12l-10 -12z" />
-            <path d="M11 3l-3 6l4 12l4 -12l-3 -6" />
-            <path d="M2 9l20 0" />
-          </svg>
+        <div class="hero-carrossel-item">
+            <img src="imagens/projeto3.webp" alt="Fachada de casa moderna, projeto residencial Monobuild" />
         </div>
-        <h3>VALORES</h3>
-        <p>
-          Comprometimento, qualidade, ética, segurança, sustentabilidade e
-          valorização de pessoas.
-        </p>
-      </div>
-    </section>
+    </div>
 
-    <!-- NOSSOS SERVIÇOS -->
+    <div class="texto-inicio">
+        <h1>
+            CONSTRUÍMOS<br />
+            COM <span>QUALIDADE.</span><br />
+            ENTREGAMOS<br />
+            <span>CONFIANÇA.</span>
+        </h1>
+        <h2 class="subtitulo-hero">
+        COMPROMETIMENTO <span class="bolinha">•</span> QUALIDADE
+        <span class="bolinha">•</span>
+        EFICIÊNCIA
+        </h2>
+        <div class="botoes-inicio">
+        <a href="#servicos" class="botao-servicos">
+            CONHEÇA NOSSOS SERVIÇOS →
+        </a>
+        <a href="https://wa.me/5519996364658" class="botao-falarzap" target="_blank">
+            <img src="imagens/logowhats 1.svg" alt="WhatsApp" />
+            CHAMAR NO WHATSAPP
+        </a>
+        </div>
+    </div>
+
+    <div class="hero-dots" id="heroDots">
+        <button class="hero-dot ativo" data-index="0" aria-label="Foto 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Foto 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Foto 3"></button>
+    </div>
+    </div>
+
+        <!-- NOSSOS SERVIÇOS -->
     <section class="servicos" id="servicos">
       <p class="subtitulo">NOSSOS SERVIÇOS</p>
-      <h2 class="titulo-secao">Soluções completas<br />para o seu projeto</h2>
-      <div class="grid-servicos-cards">
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-              <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-            </svg>
+      <h2 class="titulo-secao">SOLUÇÕES COMPLETAS<br />PARA O SEU PROJETO</h2>
+
+      <div class="carrossel-servicos-container">
+        <button class="carrossel-seta carrossel-seta-esquerda" id="servicosSetaEsquerda" aria-label="Serviço anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 6l-6 6l6 6" />
+          </svg>
+        </button>
+
+        <div class="grid-servicos-cards" id="servicosCarrosselTrack">
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+              </svg>
+            </div>
+            <h3>Construção Residencial</h3>
+            <p>Construímos casas sob medida com foco em conforto, segurança e alto padrão de acabamento.</p>
           </div>
-          <h3>Construção Residencial</h3>
-          <p>
-            Construímos casas sob medida com foco em conforto, segurança e alto
-            padrão de acabamento.
-          </p>
-        </div>
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 21l18 0" />
-              <path d="M9 8l1 0" />
-              <path d="M9 12l1 0" />
-              <path d="M9 16l1 0" />
-              <path d="M14 8l1 0" />
-              <path d="M14 12l1 0" />
-              <path d="M14 16l1 0" />
-              <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
-            </svg>
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l18 0" />
+                <path d="M9 8l1 0" /><path d="M9 12l1 0" /><path d="M9 16l1 0" />
+                <path d="M14 8l1 0" /><path d="M14 12l1 0" /><path d="M14 16l1 0" />
+                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+              </svg>
+            </div>
+            <h3>Construção Comercial</h3>
+            <p>Soluções completas para comércios, escritórios e empreendimentos comerciais.</p>
           </div>
-          <h3>Construção Comercial</h3>
-          <p>
-            Soluções completas para comércios, escritórios e empreendimentos
-            comerciais.
-          </p>
-        </div>
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M17 3l4 4l-14 14l-4 -4z" />
-              <path d="M16 7l-1.5 -1.5" />
-              <path d="M13 10l-1.5 -1.5" />
-              <path d="M10 13l-1.5 -1.5" />
-              <path d="M7 16l-1.5 -1.5" />
-            </svg>
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 3l4 4l-14 14l-4 -4z" />
+                <path d="M16 7l-1.5 -1.5" /><path d="M13 10l-1.5 -1.5" /><path d="M10 13l-1.5 -1.5" /><path d="M7 16l-1.5 -1.5" />
+              </svg>
+            </div>
+            <h3>Projetos Personalizados</h3>
+            <p>Desenvolvemos projetos exclusivos que unem funcionalidade, estética e viabilidade.</p>
           </div>
-          <h3>Projetos Personalizados</h3>
-          <p>
-            Desenvolvemos projetos exclusivos que unem funcionalidade, estética
-            e viabilidade.
-          </p>
-        </div>
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
-              />
-              <path
-                d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
-              />
-              <path d="M9 12l.01 0" />
-              <path d="M13 12l2 0" />
-              <path d="M9 16l.01 0" />
-              <path d="M13 16l2 0" />
-            </svg>
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                <path d="M9 12l.01 0" /><path d="M13 12l2 0" /><path d="M9 16l.01 0" /><path d="M13 16l2 0" />
+              </svg>
+            </div>
+            <h3>Gerenciamento de Obras</h3>
+            <p>Acompanhamento e gestão de todas as etapas da obra para garantir qualidade, prazos e custos.</p>
           </div>
-          <h3>Gerenciamento de Obras</h3>
-          <p>
-            Acompanhamento e gestão de todas as etapas da obra para garantir
-            qualidade, prazos e custos.
-          </p>
-        </div>
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M14.531 4.531c-1.475 1.475 -1.375 3.75 -.75 5.469l-6.281 6.281c-.616 -.427 -1.75 -.5 -2.5 .25l-3 3c-.5 .5 -.5 1.325 0 1.75l2 2c.492 .492 1.283 .462 1.75 0l3 -3c.75 -.75 .627 -1.884 .25 -2.5l6.281 -6.281c1.719 .625 3.994 .725 5.469 -.75c1.917 -1.917 1.917 -4.917 0 -6.834c-.417 -.417 -1.084 -.417 -1.5 0l-2.084 2.084l-2.166 -.75l-.75 -2.166l2.084 -2.084c.417 -.417 .417 -1.084 0 -1.5c-1.917 -1.917 -4.917 -1.917 -6.834 0z"
-              />
-            </svg>
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14.531 4.531c-1.475 1.475 -1.375 3.75 -.75 5.469l-6.281 6.281c-.616 -.427 -1.75 -.5 -2.5 .25l-3 3c-.5 .5 -.5 1.325 0 1.75l2 2c.492 .492 1.283 .462 1.75 0l3 -3c.75 -.75 .627 -1.884 .25 -2.5l6.281 -6.281c1.719 .625 3.994 .725 5.469 -.75c1.917 -1.917 1.917 -4.917 0 -6.834c-.417 -.417 -1.084 -.417 -1.5 0l-2.084 2.084l-2.166 -.75l-.75 -2.166l2.084 -2.084c.417 -.417 .417 -1.084 0 -1.5c-1.917 -1.917 -4.917 -1.917 -6.834 0z" />
+              </svg>
+            </div>
+            <h3>Reformas e Manutenções</h3>
+            <p>Renovamos e valorizamos imóveis com soluções eficientes e materiais de qualidade.</p>
           </div>
-          <h3>Reformas e Manutenções</h3>
-          <p>
-            Renovamos e valorizamos imóveis com soluções eficientes e materiais
-            de qualidade.
-          </p>
-        </div>
-        <div class="card-servico-item">
-          <div class="icone-circulo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
-              />
-              <path
-                d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
-              />
-              <path d="M9 14l2 2l4 -4" />
-            </svg>
+          <div class="card-servico-item">
+            <div class="icone-circulo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                <path d="M9 14l2 2l4 -4" />
+              </svg>
+            </div>
+            <h3>Consultoria Técnica</h3>
+            <p>Orientação técnica para tomada de decisões assertivas e melhores resultados no seu projeto.</p>
           </div>
-          <h3>Consultoria Técnica</h3>
-          <p>
-            Orientação técnica para tomada de decisões assertivas e melhores
-            resultados no seu projeto.
-          </p>
         </div>
+
+        <button class="carrossel-seta carrossel-seta-direita" id="servicosSetaDireita" aria-label="Próximo serviço">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg>
+        </button>
       </div>
     </section>
 
-    <!-- SISTEMA CONSTRUTIVO (teaser) -->
-    <section class="secao-sistema-construtivo" id="sistema-construtivo">
-      <a href="sistemaconstrutivo.html" class="banner-sistemas">
-        <div class="banner-sistemas-icone">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 4h18v4h-18z" />
-            <path d="M3 12h18v4h-18z" />
-            <path d="M3 20h18v0h-18z" />
-          </svg>
+    <!-- SISTEMA CONSTRUTIVO (conteúdo completo) -->
+    <section class="tipos-sistemas" id="sistema-construtivo">
+      <p class="subtitulo">CONHEÇA NOSSOS</p>
+      <h2 class="titulo-secao2">TIPOS DE SISTEMAS CONSTRUTIVOS</h2>
+
+      <div class="grid-sistemas" id="sistemasCarrosselTrack">
+
+        <!-- CARD 1 - EPS MONOLÍTICO -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img src="imagens/casaeps.webp" alt="Sistema construtivo EPS Monolítico" />
+            <span class="card-sistema-numero">01</span>
+            <div class="card-sistema-faixa">
+              <h3>EPS MONOLÍTICO</h3>
+              <p>Mais desempenho em uma única etapa.</p>
+            </div>
+          </div>
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema que utiliza formas de EPS preenchidas com concreto armado, unindo isolamento térmico e alta resistência estrutural.
+            </p>
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 3l8 4v5c0 5 -3.5 7.5 -8 9c-4.5 -1.5 -8 -4 -8 -9v-5l8 -4z" />
+                </svg>
+                Alta resistência estrutural
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+                </svg>
+                Isolamento térmico e acústico
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+                </svg>
+                Execução rápida e limpa
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M17 4a2 2 0 0 1 2 2v14l-7 -4l-7 4v-14a2 2 0 0 1 2 -2h10z" />
+                </svg>
+                Redução de desperdícios
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 3a3 3 0 0 0 -3 3v10a3 3 0 0 0 6 0v-10a3 3 0 0 0 -3 -3" />
+                  <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-2" />
+                </svg>
+                Sustentabilidade
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="banner-sistemas-texto">
-          <h3>Conheça nossos Sistemas Construtivos</h3>
-          <p>
-            Trabalhamos com diferentes tecnologias para oferecer a melhor
-            solução para o seu projeto.
-          </p>
+
+        <!-- CARD 2 - ALVENARIA ESTRUTURAL -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img src="imagens/casaestrutural.webp" alt="Sistema construtivo Alvenaria Estrutural" />
+            <span class="card-sistema-numero">02</span>
+            <div class="card-sistema-faixa">
+              <h3>ALVENARIA ESTRUTURAL</h3>
+              <p>Robustez e economia para sua obra.</p>
+            </div>
+          </div>
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema em que as paredes têm função estrutural, dispensando vigas e pilares convencionais, com mais agilidade e menor custo.
+            </p>
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 17l6 -6l4 4l8 -8" />
+                  <path d="M14 7l7 0l0 7" />
+                </svg>
+                Redução no custo da estrutura
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M13.45 11.55l2.05 -2.05" />
+                  <path d="M6.4 20a9 9 0 1 1 11.2 0z" />
+                </svg>
+                Maior rapidez na execução
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l18 0" />
+                  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                  <path d="M9 8l1 0" /><path d="M9 12l1 0" /><path d="M9 16l1 0" />
+                  <path d="M14 8l1 0" /><path d="M14 12l1 0" /><path d="M14 16l1 0" />
+                </svg>
+                Excelente desempenho estrutural
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+                </svg>
+                Menos etapas construtivas
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
+                </svg>
+                Ótimo desempenho térmico e acústico
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="banner-sistemas-seta">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M13 18l6 -6" />
-            <path d="M13 6l6 6" />
-          </svg>
+
+        <!-- CARD 3 - LIGHT STEEL FRAME -->
+        <div class="card-sistema">
+          <div class="card-sistema-imagem">
+            <img src="imagens/casasteel.webp" alt="Sistema construtivo Light Steel Frame" />
+            <span class="card-sistema-numero">03</span>
+            <div class="card-sistema-faixa">
+              <h3>LIGHT STEEL FRAME</h3>
+              <p>Leveza, tecnologia e precisão.</p>
+            </div>
+          </div>
+          <div class="card-sistema-corpo">
+            <p class="card-sistema-descricao">
+              Sistema construtivo industrializado em aço galvanizado, ideal para obras mais rápidas, sustentáveis e com alto padrão de acabamento.
+            </p>
+            <div class="lista-caracteristicas">
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 21c.5 -4.5 2.5 -8 7 -10" />
+                  <path d="M9 18c6.218 0 10.5 -3.288 11 -12v-2h-4.014c-9 0 -11.986 4 -12 9c0 1 0 3 2 5h3z" />
+                </svg>
+                Construção a seco
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 3l8 4v5c0 5 -3.5 7.5 -8 9c-4.5 -1.5 -8 -4 -8 -9v-5l8 -4z" />
+                </svg>
+                Leveza e resistência
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 21v-13l6 -4l6 4v13" />
+                  <path d="M10 21v-6h4v6" />
+                </svg>
+                Precisão e qualidade industrial
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 3a3 3 0 0 0 -3 3v10a3 3 0 0 0 6 0v-10a3 3 0 0 0 -3 -3" />
+                  <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2v-2" />
+                </svg>
+                Sustentabilidade
+              </div>
+              <div class="caracteristica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M6 4v4" /><path d="M6 12v8" />
+                  <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M12 4v10" /><path d="M12 18v2" />
+                  <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M18 4v1" /><path d="M18 9v11" />
+                </svg>
+                Flexibilidade de projetos
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
       </a>
     </section>
 
@@ -403,24 +375,12 @@
     <section class="nosso-processo">
       <p class="subtitulo-claro">COMO TRABALHAMOS</p>
       <h2 class="titulo-secao-claro">Nosso processo</h2>
-      <p class="descricao-secao-clara">
-        Um método claro e transparente para garantir o sucesso do seu projeto.
-      </p>
+      <p class="descricao-secao-clara">Um método claro e transparente para garantir o sucesso do seu projeto.</p>
 
-      <div class="linha-processo">
+      <div class="linha-processo" id="processoCarrosselTrack">
         <div class="etapa-processo">
           <div class="etapa-icone">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
             </svg>
@@ -432,24 +392,10 @@
 
         <div class="etapa-processo">
           <div class="etapa-icone">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"
-              />
-              <path
-                d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"
-              />
+              <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+              <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
               <path d="M16 5l3 3" />
             </svg>
           </div>
@@ -460,47 +406,21 @@
 
         <div class="etapa-processo">
           <div class="etapa-icone">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
-              />
-              <path
-                d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
-              />
+              <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+              <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
               <path d="M9 14l2 2l4 -4" />
             </svg>
           </div>
           <span class="etapa-numero">03</span>
           <h4>Execução</h4>
-          <p>
-            Executamos a obra com eficiência, qualidade e controle de prazos.
-          </p>
+          <p>Executamos a obra com eficiência, qualidade e controle de prazos.</p>
         </div>
 
         <div class="etapa-processo">
           <div class="etapa-icone">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
               <path d="M21 21l-6 -6" />
@@ -513,17 +433,7 @@
 
         <div class="etapa-processo">
           <div class="etapa-icone">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
               <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
@@ -537,26 +447,41 @@
       </div>
     </section>
 
+    <!-- SOBRE NÓS / EMPRESA -->
+    <section class="sobre-nos" id="empresa">
+      <div class="sobre-texto">
+        <p class="subtitulo-sobre">SOBRE NÓS —</p>
+        <h2 class="titulo-sobre">
+          CONSTRUÍMOS <br />
+          MAIS QUE OBRAS,<br />
+          <span>CONSTRUÍMOS <br />RELAÇÕES.</span>
+        </h2>
+        <div class="linha-divisoria"></div>
+        <p class="texto-sobre">
+          A <span>Monobuild</span> nasceu com o propósito de entregar soluções
+          construtivas inteligentes, seguras e sustentáveis. Unimos engenharia,
+          tecnologia e compromisso para transformar projetos em obras de alta
+          qualidade.
+        </p>
+      </div>
+      <div class="sobre-imagem">
+        <img src="imagens/projeto1.webp" alt="Fachada moderna de projeto Monobuild" />
+      </div>
+    </section>
+
     <!-- CONTATO / CTA WHATSAPP -->
     <section class="secao-cta" id="contato">
       <div class="cta-contato">
         <div class="cta-icone">
           <img src="imagens/logowhats 1.svg" alt="WhatsApp" />
         </div>
-
         <div class="cta-texto">
           <h3>VAMOS TIRAR SEU<br />PROJETO DO PAPEL?</h3>
         </div>
-
         <p class="cta-descricao">
           Entre em contato e solicite<br />um orçamento sem compromisso.
         </p>
-
-        <a
-          href="https://wa.me/5511930128341"
-          class="botao-falar-whatsapp"
-          target="_blank"
-        >
+        <a href="https://wa.me/5519996364658" class="botao-falar-whatsapp" target="_blank">
           FALAR NO WHATSAPP
         </a>
       </div>
@@ -571,70 +496,34 @@
       <div class="rodape-coluna">
         <h4>NAVEGAÇÃO</h4>
         <a href="#inicio">Início</a>
-        <a href="#empresa">Empresa</a>
         <a href="#servicos">Serviços</a>
         <a href="#sistema-construtivo">Sistema Construtivo</a>
+        <a href="#empresa">Empresa</a>
         <a href="#contato">Contato</a>
       </div>
 
       <div class="rodape-coluna">
         <h4>CONTATO</h4>
         <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
-            />
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
           </svg>
-          (11) 98549-1206
+          (19) 99636-4658
         </p>
         <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-            />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
             <path d="M3 7l9 6l9 -6" />
           </svg>
           monobuild@outlook.com.br
         </p>
         <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-            <path
-              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
-            />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
           </svg>
           Indaiatuba - SP
         </p>
@@ -643,54 +532,32 @@
       <div class="rodape-coluna">
         <h4>SIGA-NOS</h4>
         <div class="rodape-redes">
-          <a href="#" target="_blank" aria-label="Instagram">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+          <a href="https://www.instagram.com/monobuildbr/" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-              />
+              <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
               <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
               <path d="M16.5 7.5l0 .01" />
-            </svg>
-          </a>
-          <a href="#" target="_blank" aria-label="LinkedIn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-              />
-              <path d="M8 11l0 5" />
-              <path d="M8 8l0 .01" />
-              <path d="M12 16l0 -5" />
-              <path d="M16 16v-3a2 2 0 0 0 -4 0" />
             </svg>
           </a>
         </div>
       </div>
 
-      <p class="rodape-copyright">
-        © 2026 Monobuild. Todos os direitos reservados.
-      </p>
+      <p class="rodape-copyright">© 2026 Monobuild. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/carrossel.js"></script>
+    <script src="js/menu.js"></script>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5519996364658" class="whatsapp-flutuante" target="_blank" aria-label="Falar no WhatsApp">
+    <span class="whatsapp-pulso"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+        <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+    </svg>
+    <span class="whatsapp-tooltip">Fale conosco</span>
+    </a>
   </body>
 </html>
