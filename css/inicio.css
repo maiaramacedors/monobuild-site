@@ -873,6 +873,10 @@ div[id] {
     font-size: 26px;
   }
 
+  .casa {
+    height: 65vh;
+  }
+
   .texto-inicio {
     left: 5%;
     right: 5%;
@@ -936,7 +940,9 @@ div[id] {
   max-height: 0;
   padding: 0 6%;
   overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
 }
 
 /* Quando tiver a classe "aberto", expande o dropdown */
@@ -988,6 +994,7 @@ div[id] {
 }
 .carrossel-servicos-container {
   position: relative;
+  padding: 0 40px;
 }
 
 .carrossel-seta {
@@ -1015,26 +1022,16 @@ div[id] {
 }
 
 .carrossel-seta-esquerda {
-  left: -10px;
+  left: 0px;
 }
 
 .carrossel-seta-direita {
-  right: -10px;
+  right: 0px;
 }
 
 @media (max-width: 1024px) {
   .carrossel-seta {
     display: flex;
-  }
-}
-
-@media (max-width: 480px) {
-  .carrossel-seta-esquerda {
-    left: 4px;
-  }
-
-  .carrossel-seta-direita {
-    right: 4px;
   }
 }
 
@@ -1047,6 +1044,7 @@ div[id] {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  scroll-snap-stop: always;
 }
 
 .hero-carrossel-track::-webkit-scrollbar {
@@ -1057,6 +1055,7 @@ div[id] {
   flex: 0 0 100%;
   scroll-snap-align: start;
   height: 100%;
+  scroll-snap-stop: always;
 }
 
 .hero-carrossel-item img {
@@ -1193,8 +1192,10 @@ div[id] {
     right: 16px;
   }
 
+  .casa {
+    height: 70vh;
+  }
   .whatsapp-tooltip {
     display: none;
   }
 }
-
