@@ -154,25 +154,6 @@ div[id] {
   gap: 20px;
 }
 
-.botao-servicos {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  padding: 12px 18px;
-  background-color: #4fb5ce;
-  color: #000000;
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.botao-servicos:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
 .botao-falarzap {
   display: flex;
   align-items: center;
@@ -217,6 +198,7 @@ div[id] {
 
 .sobre-texto {
   flex: 1;
+  text-align: center;
 }
 
 .subtitulo-sobre {
@@ -236,14 +218,7 @@ div[id] {
 }
 
 .titulo-sobre span {
-  color: #4fb5ce;
-}
-
-.linha-divisoria {
-  width: 50px;
-  height: 3px;
-  background-color: #4fb5ce;
-  margin-bottom: 24px;
+  color: #24bddb;
 }
 
 .texto-sobre {
@@ -254,7 +229,7 @@ div[id] {
 }
 
 .texto-sobre span {
-  color: #4fb5ce;
+  color: #24bddb;
   font-weight: bold;
 }
 
@@ -288,7 +263,7 @@ div[id] {
 
 .titulo-secao2 {
   color: #ffffff;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -317,6 +292,9 @@ div[id] {
   border-radius: 12px;
   padding: 32px;
   transition: 0.3s;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-servico-item:hover {
@@ -378,6 +356,9 @@ div[id] {
   overflow: hidden;
   text-align: left;
   transition: 0.3s;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-sistema:hover {
@@ -583,6 +564,9 @@ div[id] {
   color: #b5b5b5;
   font-size: 13px;
   line-height: 1.5;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FAIXA DE CONTATO (CTA) */
@@ -747,7 +731,7 @@ div[id] {
   }
 
   .card-servico-item {
-    flex: 0 0 calc(50% - 12px);
+    flex: 0 0 100%;
     scroll-snap-align: start;
   }
 
@@ -766,7 +750,7 @@ div[id] {
   }
 
   .card-sistema {
-    flex: 0 0 calc(70% - 12px);
+    flex: 0 0 100%;
     scroll-snap-align: start;
   }
 
@@ -785,7 +769,7 @@ div[id] {
   }
 
   .etapa-processo {
-    flex: 0 0 calc(40% - 12px);
+    flex: 0 0 100%;
     scroll-snap-align: start;
   }
 }
@@ -819,6 +803,7 @@ div[id] {
     gap: 30px;
   }
 
+
   .titulo-sobre {
     font-size: 24px;
   }
@@ -828,7 +813,8 @@ div[id] {
   }
 
   .card-servico-item {
-    flex: 0 0 85%;
+    flex: 0 0 100%;
+    max-width: 380px;
   }
 
   .titulo-secao,
@@ -837,7 +823,8 @@ div[id] {
   }
 
   .card-sistema {
-    flex: 0 0 88%;
+    flex: 0 0 100%;
+    max-width: 400px;  /* ajusta pro tamanho de tablet/celular grande */
   }
   .cta-sistema-texto h3,
   .cta-sistema-texto p {
@@ -845,7 +832,7 @@ div[id] {
   }
 
   .etapa-processo {
-    flex: 0 0 60%;
+    flex: 0 0 100%;
   }
 
   .cta-contato {
@@ -890,15 +877,18 @@ div[id] {
   }
 
   .card-servico-item {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
+    max-width: 300px;
+
   }
 
   .card-sistema {
-    flex: 0 0 92%;
+    flex: 0 0 100%;
+    max-width: 320px;  /* opcional, ajusta pro celular */
   }
 
   .etapa-processo {
-    flex: 0 0 75%;
+    flex: 0 0 100%;
   }
 
   .rodape {
