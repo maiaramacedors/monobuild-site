@@ -91,7 +91,7 @@ div[id] {
 /* HERO */
 .casa {
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100dvh - 90px);
   overflow: hidden;
   position: relative;
 }
@@ -863,7 +863,7 @@ div[id] {
   }
 
   .casa {
-    height: 65vh;
+    height: 65dvh;
   }
 
   .texto-inicio {
@@ -1088,7 +1088,7 @@ div[id] {
 
 @media (max-width: 480px) {
   .hero-dots {
-    bottom: 16px;
+    bottom: 70px;
   }
 }
 
