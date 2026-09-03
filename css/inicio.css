@@ -803,7 +803,6 @@ div[id] {
     gap: 30px;
   }
 
-
   .titulo-sobre {
     font-size: 24px;
   }
@@ -824,7 +823,7 @@ div[id] {
 
   .card-sistema {
     flex: 0 0 100%;
-    max-width: 400px;  /* ajusta pro tamanho de tablet/celular grande */
+    max-width: 400px; /* ajusta pro tamanho de tablet/celular grande */
   }
   .cta-sistema-texto h3,
   .cta-sistema-texto p {
@@ -880,12 +879,11 @@ div[id] {
   .card-servico-item {
     flex: 0 0 100%;
     max-width: 300px;
-
   }
 
   .card-sistema {
     flex: 0 0 100%;
-    max-width: 320px;  /* opcional, ajusta pro celular */
+    max-width: 320px; /* opcional, ajusta pro celular */
   }
 
   .etapa-processo {
